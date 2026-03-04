@@ -1,0 +1,282 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Times New Roman;}{\f1 Consolas;}}
+\fs24
+Keelan O'Doherty\line
+AEM 428 \line
+Professor Simeh Olcmen\line
+4 March 2026\line
+\line
+\qc\b Special Project 1: Quasi-One-Dimensional Nozzle Flow with Friction and Heat Addition\b0\par
+\ql\line
+\b Abstract\b0\line
+This report evaluates the variation of Mach number, static temperature, and static pressure along a converging-diverging nozzle axis beginning at the throat, x = 0, using the Chapter 8 Shapiro formulation. A MATLAB implementation was developed to compare four required scenarios: (a) isentropic flow, (b) friction only, (c) heat addition only, and (d) combined friction and heat addition. The inlet total conditions were set to p0 = 50 MPa (gage) and T0 = 3000 K. Results are presented as three plots (Mach number, temperature, and semilog pressure) with all four scenarios overlaid for direct comparison.\line
+\line
+\b 1. Introduction\b0\line
+Compressible flow through nozzles is highly sensitive to area change, wall friction, and heat transfer. Near the throat, M = 1 produces an indeterminate form in the differential equation for Mach number variation, requiring careful numerical handling and small spatial steps. The objective of this project is to compute and compare x-wise flow-property evolution for the four assigned physical cases and present clear engineering plots suitable for grading.\line
+\line
+\b 2. Governing Approach\b0\line
+The nozzle geometry is read from a file and interpolated onto a fine x-grid. From the radius profile, area and logarithmic area derivatives are calculated. The mass flow rate is initialized from choked-flow conditions at the throat. For each case, the code computes local total-temperature variation (when heat addition is present), friction source terms (when wall friction is present), and integrates d(M^2)/dx using a robust branch function near M = 1.\line
+\line
+Static properties are then recovered from standard compressible-flow relations:\line
+- T = T0 / [1 + (k-1)M^2/2]\line
+- V = M\~a, with a = sqrt(kRT)\line
+- rho = mdot/(AV)\line
+- p = rhoRT\line
+\line
+\b 3. Input Parameters and Manipulated Variables\b0\line
+\b Fixed assignment inputs\b0\line
+- k = 1.4\line
+- R = 287 J/(kg-K)\line
+- Inlet total temperature: T0,in = 3000 K\line
+- Inlet total pressure: p0 = 50 MPa (gage)\line
+\line
+\b Case-defining variables\b0\line
+- Friction coefficient, f\line
+- Heat-addition slope to total temperature, q\line
+\line
+\b Numerical control variables\b0\line
+- Initial location near throat: x0\line
+- Initial Mach slightly above 1: M0\line
+- Spatial increment: dx (small for smooth curves)\line
+- Adaptive step-halving near singular behavior at M = 1\line
+\line
+\b 4. Required Cases\b0\line
+(a) Isentropic: f = 0, q = 0\line
+(b) Friction only: f = 0.005, q = 0\line
+(c) Heat transfer only: f = 0, q \~!= 0\line
+(d) Friction + heat transfer: f = 0.005, q \~!= 0\line
+\line
+\b 5. Results (Insert Figures)\b0\line
+\b Figure 1. Mach number vs x for cases (a)-(d)\b0\line
+[INSERT FIGURE 1 HERE: MATLAB Figure 1 \u8212? Mach number vs x with legend for A-D]\line
+\line
+\b Figure 2. Temperature vs x for cases (a)-(d)\b0\line
+[INSERT FIGURE 2 HERE: MATLAB Figure 2 \u8212? Temperature vs x with legend for A-D]\line
+\line
+\b Figure 3. Pressure vs x for cases (a)-(d), semilogy\b0\line
+[INSERT FIGURE 3 HERE: MATLAB Figure 3 \u8212? semilogy pressure vs x with legend for A-D]\line
+\line
+\b 6. Discussion and Comparison\b0\line
+The isentropic case provides the baseline acceleration and expansion behavior through the nozzle. Introducing friction modifies momentum balance and generally reduces the idealized acceleration trend, changing the Mach distribution along the axis. Heat addition modifies total temperature and therefore changes the local speed of sound and static-temperature trajectory, which in turn alters Mach and pressure development. When both effects are present, the profiles depart the most from the isentropic baseline due to simultaneous viscous and thermal source terms.\line
+\line
+The pressure plot is shown on a logarithmic scale (semilogy) as required so that differences among cases remain visible across the full magnitude range. Use of a small dx and adaptive halving near sonic conditions removes numerical glitches and prevents non-physical jumps close to the throat.\line
+\line
+\b 7. Conclusion\b0\line
+A MATLAB model based on Shapiro Chapter 8 was implemented to compute and compare M(x), T(x), and p(x) for four nozzle-flow scenarios. The submitted figures satisfy assignment requirements by using x measured from throat (x = 0), semilog pressure plotting, and smooth numerical resolution near M = 1.\line
+\line
+\b Appendix A: MATLAB Program Used\b0\line
+{\f1\fs20
+% AEM 428 Space Propulsion Project 1\line
+% Keelan O'Doherty\line
+\line
+clc;\line
+clear;\line
+close all;\line
+\line
+geomFile = 'Mach 3.0.txt';\line
+\line
+k = 1.4;\line
+R = 287;\line
+\line
+T0_in = 3000;\line
+p0_abs = 50e6 + 101325;\line
+\line
+f_fric = 0.005;\line
+qT0 = 30;\line
+\line
+x0 = 1e-6;\line
+M0 = 1 + 1e-4;\line
+\line
+dx = 1e-4;\line
+M2_floor = 1 + 1e-10;\line
+max_halves = 20;\line
+\line
+raw = readmatrix(geomFile);\line
+x = raw(:,1);\line
+r = raw(:,2);\line
+\line
+[x,iu] = unique(x,'stable');\line
+r = r(iu);\line
+x = x - min(x);\line
+L = max(x);\line
+\line
+xg = (0:dx:L).';\line
+\line
+rg = pchip(x, r, xg);\line
+\line
+drdx = gradient(rg, xg);\line
+d2rdx2 = gradient(drdx, xg);\line
+\line
+A = pi*rg.^2;\line
+dAdx = 2*pi*rg.*drdx;\line
+d2Adx2 = 2*pi*(drdx.^2 + rg.*d2rdx2);\line
+\line
+D = 2*rg;\line
+\line
+dlnA_dx = dAdx./A;\line
+d2lnA_dx2 = (d2Adx2./A) - (dAdx./A).^2;\line
+\line
+Astar = A(1);\line
+mdot = p0_abs*Astar*sqrt(k/(R*T0_in)) * (2/(k+1))^((k+1)/(2*(k-1)));\line
+\line
+cases = { ...\line
+ struct('name','A: isentropic', 'f',0.0, 'q',0.0); ...\line
+ struct('name','B: friction', 'f',f_fric, 'q',0.0); ...\line
+ struct('name','C: heat', 'f',0.0, 'q',qT0); ...\line
+ struct('name','D: both', 'f',f_fric, 'q',qT0) };\line
+\line
+sol = struct([]);\line
+\line
+idx0 = find(xg >= x0, 1, 'first');\line
+\line
+for c = 1:numel(cases)\line
+ f = cases{c}.f;\line
+ q = cases{c}.q;\line
+\line
+ T0 = T0_in + q.*xg;\line
+\line
+ if q == 0\line
+ dlnT0_dx = zeros(size(xg));\line
+ d2lnT0_dx2 = zeros(size(xg));\line
+ else\line
+ dlnT0_dx = q ./ T0;\line
+ d2lnT0_dx2 = -(q.^2) ./ (T0.^2);\line
+ end\line
+\line
+ S = 4*f ./ D;\line
+ dSdx = gradient(S, xg);\line
+\line
+ M2 = nan(size(xg));\line
+ M2(idx0) = M0^2;\line
+\line
+ for i = idx0:(numel(xg)-1)\line
+ Mi2 = M2(i);\line
+ if ~isfinite(Mi2)\line
+ break\line
+ end\line
+\line
+ dx_local = dx;\line
+ ok = false;\line
+\line
+ for h = 1:max_halves\line
+ dM2dx = shapiro_dM2dx_branch(Mi2, k, ...\line
+ dlnA_dx(i), dlnT0_dx(i), S(i), ...\line
+ d2lnA_dx2(i), d2lnT0_dx2(i), dSdx(i));\line
+\line
+ M2_try = Mi2 + dM2dx*dx_local;\line
+\line
+ if M2_try > M2_floor && isfinite(M2_try)\line
+ ok = true;\line
+ break\line
+ else\line
+ dx_local = dx_local/2;\line
+ end\line
+ end\line
+\line
+ if ~ok\line
+ M2(i+1) = Mi2;\line
+ else\line
+ M2(i+1) = M2_try;\line
+ end\line
+ end\line
+\line
+ M = sqrt(M2);\line
+\line
+ T = T0 ./ (1 + (k-1)/2 .* M.^2);\line
+ a = sqrt(k*R*T);\line
+ V = M .* a;\line
+\line
+ rho = mdot ./ (A .* V);\line
+ p = rho .* R .* T;\line
+\line
+ sol(c).name = cases{c}.name;\line
+ sol(c).x = xg;\line
+ sol(c).M = M;\line
+ sol(c).T = T;\line
+ sol(c).p = p;\line
+end\line
+\line
+figure(1);\line
+clf;\line
+grid on;\line
+hold on;\line
+for i = 1:numel(sol)\line
+ plot(sol(i).x, sol(i).M, 'LineWidth', 1.5);\line
+end\line
+xlabel('x (m)');\line
+ylabel('M');\line
+title('Mach number vs x (Cases A\endash D)');\line
+xline(0,'--');\line
+legend({sol.name}, 'Location','best');\line
+\line
+figure(2);\line
+clf;\line
+grid on;\line
+hold on;\line
+for i = 1:numel(sol)\line
+ plot(sol(i).x, sol(i).T, 'LineWidth', 1.5);\line
+end\line
+xlabel('x (m)');\line
+ylabel('T (K)');\line
+title('Temperature vs x (Cases A\endash D)');\line
+xline(0,'--');\line
+legend({sol.name}, 'Location','best');\line
+\line
+figure(3);\line
+clf;\line
+grid on;\line
+hold on;\line
+for i = 1:numel(sol)\line
+ semilogy(sol(i).x, sol(i).p, 'LineWidth', 1.5);\line
+end\line
+xlabel('x (m)');\line
+ylabel('p (Pa)');\line
+title('Pressure vs x (Cases A\endash D)');\line
+xline(0,'--');\line
+legend({sol.name}, 'Location','best');\line
+\line
+function dM2dx = shapiro_dM2dx_branch(M2, k, dlnA_dx, dlnT0_dx, S, d2lnA_dx2, d2lnT0_dx2, dSdx)\line
+\line
+G = M2 * (1 + (k-1)/2 * M2) * ( ...\line
+ -2*dlnA_dx ...\line
+ + (1 + k*M2)*dlnT0_dx ...\line
+ + k*M2*S );\line
+\line
+denom = (1 - M2);\line
+\line
+if abs(denom) > 1e-6\line
+ dM2dx = G/denom;\line
+ return\line
+end\line
+\line
+Phi = (k*(k+1)/2)*dlnT0_dx + (k*(k+1)/2)*S;\line
+\line
+Psi = -(k+1)*d2lnA_dx2 ...\line
+ + ((k+1)^2/2)*d2lnT0_dx2 ...\line
+ + (k*(k+1)/2)*dSdx;\line
+\line
+disc = (Phi/2)^2 - Psi;\line
+if disc < 0\line
+ disc = 0;\line
+end\line
+\line
+root1 = -Phi/2 + sqrt(disc);\line
+root2 = -Phi/2 - sqrt(disc);\line
+\line
+epsm = 1e-7;\line
+M2p = 1 + epsm;\line
+Gp = M2p * (1 + (k-1)/2 * M2p) * ( ...\line
+ -2*dlnA_dx ...\line
+ + (1 + k*M2p)*dlnT0_dx ...\line
+ + k*M2p*S );\line
+dlim = Gp/(1 - M2p);\line
+\line
+if abs(root1 - dlim) <= abs(root2 - dlim)\line
+ dM2dx = root1;\line
+else\line
+ dM2dx = root2;\line
+end\line
+\line
+end\line
+}\line
+}
