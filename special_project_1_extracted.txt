@@ -1,0 +1,39 @@
+
+
+--- PAGE 1 ---
+SPECIAL PROJECT 1 
+Calculate the Mach number, temperature, pressure variation along the nozzle of your choice starting 
+from the x=0 using the Chapter 8 material of Shapiro. The shape can be approximated using a 
+polynomial. You will use the code sent to generate your own nozzle geometry contour. 
+Write the code to include all the variables that can be manipulated. Next run the program for the 
+following specific cases, and then compare the results to each other. Three separate plots will be 
+required as the results, one for each of the variations along the x. 
+a) Assume that the flow is isentropic. 
+b) Assume that the friction coefficient is f = 0.005, but there is no heat transfer 
+c) Assume that the heat transfer is not zero, but there is no friction. 
+d) Assume that there are both the effects of the friction and heat transfer are present. 
+Hint: Very near the throat the delta-x variation is required to be very small. At Mach=1, the equations 
+become indefinite. 
+Use Inlet total pressure 50 MPA (gage), total temperature 3000 K 
+ 
+REQUIRED OUTPUT 
+The output for this project will be the WORD file that contains the programs used and the Figures that 
+show the variation of the  
+• Mach number 
+• Temperature and  
+• Pressure  
+Along the axis of the nozzle for the 4 different scenarios (a thru d). Example variations are shown for the 
+isentropic case at the bottom of the file. 
+ 
+ Your plots abscissa should be the distance starting at the throat section ( x=0 ). 
+ Plot the pressure variation using the semilogy command. This will plot the pressure values in a 
+logarithmic scale allowing variations to be easily visible. 
+ Make sure that the Mach number, temperature, and pressure changes are clearly visible with 
+the values chosen for the friction and the heat addition. 
+ Make sure to use small variation for the dx increments so that you will have a smooth variation 
+along the axis. Therefore there will not be straight line sections and no glitches in the plots. 
+ You may want to plot the Mach number, temperature, and pressure variations for the 4 cases (a 
+thru d) on the same plot. This approach will require you to have 3 plots in your file, but this is 
+not a requirement. Otherwise you will have 4 plots for each of the variables (these should be on 
+the same page for easy grading by our TA). 
+ 
