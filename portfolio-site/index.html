@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keelan O'Doherty | Portfolio</title>
-  <meta name="description" content="Portfolio of Keelan O'Doherty — engineering, embedded systems, home lab, and software projects." />
+  <meta name="description" content="Portfolio of Keelan O'Doherty — aerospace engineering, embedded systems, and technical builds." />
   <meta property="og:title" content="Keelan O'Doherty | Portfolio" />
   <meta property="og:description" content="Engineering projects, technical work, and contact information." />
   <meta property="og:type" content="website" />
@@ -14,83 +14,85 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-grid"></div>
+
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="#">KO</a>
+      <a class="brand" href="#">Keelan O'Doherty</a>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#focus">Focus</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button id="themeToggle" aria-label="Toggle dark mode">◐</button>
+      <button id="themeToggle" aria-label="Toggle theme">☼</button>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <img class="avatar" src="https://avatars.githubusercontent.com/u/30483212?v=4" alt="Keelan O'Doherty portrait" />
-      <div>
-        <p class="eyebrow">Keelan O'Doherty</p>
-        <h1>Engineering + Systems + Builder Mindset</h1>
-        <p class="lead">I build practical systems across embedded hardware, home infrastructure, and software automation. This site is my living portfolio.</p>
+    <section class="hero container reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Engineering Portfolio</p>
+        <h1>Building High-Impact Systems Across Hardware, Software, and Automation</h1>
+        <p class="lead">I design and ship practical technical systems — from aerospace analysis workflows to embedded control builds, homelab infrastructure, and cloud-connected automation.</p>
         <div class="cta-row">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn ghost" href="https://github.com/Keelan4604" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="#projects">Explore Projects</a>
+          <a class="btn ghost" href="https://github.com/Keelan4604" target="_blank" rel="noreferrer">GitHub Profile</a>
           <a class="btn ghost" href="https://ha.keelanodoherty.org" target="_blank" rel="noreferrer">Home Assistant</a>
         </div>
       </div>
+      <div class="hero-card">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/30483212?v=4" alt="Keelan O'Doherty" />
+        <h3>Keelan O'Doherty</h3>
+        <p>Aerospace + Applied Engineering</p>
+      </div>
     </section>
 
-    <section id="about" class="container section">
+    <section id="about" class="container section reveal">
       <h2>About</h2>
-      <p>I’m focused on aerospace and applied engineering problems, with hands-on experience in controls, hardware integration, cloud-connected home systems, and technical project execution. I enjoy turning rough ideas into robust, usable systems.</p>
       <div class="grid two">
         <article class="card">
-          <h3>Current Focus</h3>
-          <ul>
-            <li>Aerospace engineering coursework and propulsion analysis</li>
-            <li>Embedded + IoT integrations</li>
-            <li>Self-hosting, automation, and cloud-tunnel networking</li>
-          </ul>
+          <h3>What I Build</h3>
+          <p>I focus on projects that combine theory with execution: propulsion and systems analysis, embedded electronics, cloud networking, and robust automation pipelines.</p>
         </article>
         <article class="card">
-          <h3>Education Snapshot</h3>
-          <p>Engineering-focused academic track with project-driven learning and technical communication.</p>
-          <p class="muted">(Expanded resume details can be added in the next revision.)</p>
+          <h3>How I Work</h3>
+          <p>Hands-on, iterative, and outcomes-driven. I care about elegant architecture, maintainable systems, and technical clarity.</p>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="container section">
+    <section id="projects" class="container section reveal">
       <div class="row-between">
-        <h2>Featured Projects</h2>
-        <a href="https://github.com/Keelan4604?tab=repositories" target="_blank" rel="noreferrer">See all repositories →</a>
+        <h2>Selected Work</h2>
+        <a href="https://github.com/Keelan4604?tab=repositories" target="_blank" rel="noreferrer">View all repositories →</a>
       </div>
       <div id="projectGrid" class="grid three"></div>
     </section>
 
-    <section id="skills" class="container section">
-      <h2>Technical Areas</h2>
+    <section id="focus" class="container section reveal">
+      <h2>Technical Focus Areas</h2>
       <div class="chips">
-        <span>MATLAB</span><span>Embedded Systems</span><span>Arduino</span><span>Networking</span>
-        <span>Cloudflare Tunnel</span><span>Home Assistant</span><span>Linux</span><span>Automation</span>
-        <span>Technical Documentation</span><span>Systems Integration</span>
+        <span>Aerospace Engineering</span><span>MATLAB</span><span>Embedded Systems</span><span>Arduino</span>
+        <span>Home Assistant</span><span>Cloudflare Tunnel</span><span>Automation</span><span>Networking</span>
+        <span>System Design</span><span>Technical Communication</span>
       </div>
     </section>
 
-    <section id="contact" class="container section">
+    <section id="contact" class="container section reveal">
       <h2>Contact</h2>
-      <p>Best way to reach me professionally is through GitHub and email.</p>
       <div class="card">
         <p><strong>GitHub:</strong> <a href="https://github.com/Keelan4604" target="_blank" rel="noreferrer">github.com/Keelan4604</a></p>
         <p><strong>Website:</strong> <a href="https://keelanodoherty.org" target="_blank" rel="noreferrer">keelanodoherty.org</a></p>
+        <p><strong>Home Systems:</strong> <a href="https://ha.keelanodoherty.org" target="_blank" rel="noreferrer">ha.keelanodoherty.org</a></p>
       </div>
     </section>
   </main>
 
   <footer class="container footer">
-    <p>© <span id="year"></span> Keelan O'Doherty. Built with care.</p>
+    <p>© <span id="year"></span> Keelan O'Doherty · Crafted with intention.</p>
   </footer>
 
   <script src="./script.js" defer></script>

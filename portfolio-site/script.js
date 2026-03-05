@@ -9,26 +9,41 @@ document.getElementById('themeToggle')?.addEventListener('click', () => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+function installReveal() {
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add('show');
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+
 async function loadProjects() {
   try {
     const res = await fetch('./data/projects.json', { cache: 'no-store' });
     const projects = await res.json();
     const grid = document.getElementById('projectGrid');
-    const top = projects
-      .sort((a,b) => new Date(b.updated) - new Date(a.updated))
+
+    const curated = projects
+      .filter(p => p?.name)
+      .sort((a, b) => a.name.localeCompare(b.name))
       .slice(0, 9);
 
-    grid.innerHTML = top.map(p => `
-      <article class="card">
+    grid.innerHTML = curated.map(p => `
+      <article class="card reveal">
         <h3>${p.name}</h3>
-        <p>${p.description || 'Project repository and documentation.'}</p>
-        <p class="muted">${p.language || 'Multi-tech'} • Updated ${new Date(p.updated).toLocaleDateString()}</p>
-        <a href="${p.url}" target="_blank" rel="noreferrer">Open repository ↗</a>
+        <p>${p.description || 'Project repository and technical documentation.'}</p>
+        <p class="muted">${p.language || 'Multi-stack / mixed tooling'}</p>
+        <a href="${p.url}" target="_blank" rel="noreferrer">Open Repository ↗</a>
       </article>
     `).join('');
+
+    installReveal();
   } catch (e) {
     document.getElementById('projectGrid').innerHTML = '<p class="muted">Could not load projects right now.</p>';
   }
 }
 
+installReveal();
 loadProjects();
