@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <div class="parallax-layer layer-1" data-speed="0.12"></div>
+  <div class="parallax-layer layer-2" data-speed="0.2"></div>
+
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#">Keelan O'Doherty</a>
@@ -27,18 +30,23 @@
     <section class="hero container reveal">
       <div>
         <p class="kicker">Aerospace Engineering • Systems • Applied Research</p>
-        <h1>Designing real-world engineering systems with rigor and execution.</h1>
+        <h1>Designing real-world engineering systems with rigor, creativity, and mission focus.</h1>
         <p class="lead">I’m an Aerospace Engineering student at The University of Alabama focused on propulsion, flight dynamics, systems integration, and computational + experimental validation.</p>
         <div class="cta-row">
           <a class="btn" href="#projects">See Projects</a>
           <a class="btn ghost" href="https://github.com/Keelan4604" target="_blank" rel="noreferrer">GitHub</a>
-
         </div>
       </div>
-      <aside class="hero-card">
-        <img src="./assets/images/1727813143970.jpg" alt="Keelan O'Doherty" class="avatar" />
-        <h3>Keelan O'Doherty</h3>
-        <p>Tuscaloosa, AL</p>
+      <aside class="hero-stack">
+        <article class="hero-card">
+          <img src="./assets/images/1727813143970.jpg" alt="Keelan O'Doherty" class="avatar" />
+          <h3>Keelan O'Doherty</h3>
+          <p>Tuscaloosa, AL</p>
+        </article>
+        <article class="hero-card project-peek">
+          <img src="./assets/images/download (1).png" alt="ORCA senior design CAD view" class="project-img" />
+          <p>Senior Design Highlight: ORCA fixed-wing eVTOL</p>
+        </article>
       </aside>
     </section>
 
@@ -68,6 +76,28 @@
         <article class="card">
           <h3>UAV Propeller Acoustics (AERO)</h3>
           <p>Led design and computational analysis of four propeller geometries (planar, alular, toroidal, forward-swept) using SolidWorks CFD/FEA at 10,000 RPM, then validated with thrust and microphone testing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="container section reveal">
+      <h2>Engineering Journey</h2>
+      <div class="timeline">
+        <article class="card t-item">
+          <h3>01 • Foundation</h3>
+          <p>Built fundamentals in aerodynamics, thermodynamics, flight mechanics, and applied math.</p>
+        </article>
+        <article class="card t-item">
+          <h3>02 • Applied Research</h3>
+          <p>Advanced into UAV acoustics, CFD/FEA analysis, and prototype validation workflows.</p>
+        </article>
+        <article class="card t-item">
+          <h3>03 • Systems Integration</h3>
+          <p>Scaled to multidisciplinary VTOL system design with CAD-led integration and controls collaboration.</p>
+        </article>
+        <article class="card t-item">
+          <h3>04 • Next Mission</h3>
+          <p>Targeting graduate-level propulsion, flight dynamics, and aircraft systems research.</p>
         </article>
       </div>
     </section>
