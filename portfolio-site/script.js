@@ -45,6 +45,14 @@ function installReveal() {
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 }
 
+function installCompareSlider() {
+  const range = document.getElementById('compareRange');
+  const overlay = document.getElementById('compareOverlay');
+  if (!range || !overlay) return;
+  const update = () => overlay.style.width = `${range.value}%`;
+  range.addEventListener('input', update);
+  update();
+}
 
 const projectSummaries = {
   'sim7000A-cellular-GSM-connection': 'Arduino LTE CAT-M1 communication node for remote telemetry and command workflows.',
@@ -82,4 +90,5 @@ async function loadProjects() {
 installReveal();
 installScrollProgress();
 installActiveNav();
+installCompareSlider();
 loadProjects();
