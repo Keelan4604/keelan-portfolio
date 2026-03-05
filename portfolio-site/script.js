@@ -9,6 +9,35 @@ document.getElementById('themeToggle')?.addEventListener('click', () => {
   localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
 });
 
+function installScrollProgress() {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  const update = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = `${pct}%`;
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+function installActiveNav() {
+  const links = [...document.querySelectorAll('nav a[href^="#"]')];
+  if (!links.length) return;
+  const byId = Object.fromEntries(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const sections = Object.keys(byId).map(id => document.getElementById(id)).filter(Boolean);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        byId[e.target.id]?.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 });
+  sections.forEach(s => io.observe(s));
+}
+
 function installReveal() {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
@@ -50,4 +79,6 @@ async function loadProjects() {
 }
 
 installReveal();
+installScrollProgress();
+installActiveNav();
 loadProjects();

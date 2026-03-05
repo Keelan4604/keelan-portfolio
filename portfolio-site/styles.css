@@ -32,19 +32,22 @@ body {
 .nav { display: flex; align-items: center; gap: 1rem; justify-content: space-between; padding: .85rem 0; }
 .brand { color: var(--text); text-decoration: none; font-weight: 800; }
 nav a { color: var(--muted); text-decoration: none; margin-left: .9rem; }
-nav a:hover { color: var(--camel-strong); }
+nav a:hover, nav a.active { color: var(--camel-strong); }
 .theme-btn { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 10px; padding: .45rem .65rem; cursor: pointer; }
+.scroll-progress { position: sticky; top: 58px; z-index: 29; height: 2px; background: transparent; }
+.scroll-progress span { display: block; height: 100%; width: 0%; background: var(--camel); transition: width .08s linear; }
 .hero { display: grid; grid-template-columns: 1.45fr .75fr; gap: 1rem; padding: 3.7rem 0 1.8rem; }
 .kicker { text-transform: uppercase; letter-spacing: .09em; font-size: .8rem; color: var(--camel-strong); font-weight: 700; }
 h1 { font-size: clamp(1.9rem, 3.8vw, 3rem); line-height: 1.14; margin: .3rem 0 .8rem; }
 .lead { color: var(--muted); max-width: 66ch; }
 .hero-card, .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
 .hero-card { padding: 1rem; text-align: center; }
-.avatar { width: 172px; height: 172px; border-radius: 14px; object-fit: cover; object-position: center; display: block; margin: 0 auto .8rem; border: 1px solid var(--line); }
+.avatar { width: 172px; height: 172px; border-radius: 14px; object-fit: cover; object-position: 50% 22%; display: block; margin: 0 auto .8rem; border: 1px solid var(--line); }
 .cta-row { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .65rem; }
 .btn { text-decoration: none; font-weight: 700; padding: .72rem 1rem; border-radius: 12px; background: var(--camel); color: #1d1309; }
 .btn.ghost { background: transparent; border: 1px solid var(--line); color: var(--text); }
 .section { padding: 2.1rem 0; }
+section[id] { scroll-margin-top: 92px; }
 h2 { margin: 0 0 1rem; font-size: clamp(1.45rem, 2.4vw, 2rem); }
 .grid { display: grid; gap: 1rem; }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -54,6 +57,8 @@ h2 { margin: 0 0 1rem; font-size: clamp(1.45rem, 2.4vw, 2rem); }
 .row-between a, .card a { color: var(--camel-strong); text-decoration: none; }
 .row-between a:hover, .card a:hover { text-decoration: underline; }
 ul { padding-left: 1.1rem; }
+#projectGrid .card h3 { margin: .1rem 0 .45rem; }
+#projectGrid .card p { color: var(--muted); margin: 0 0 .75rem; }
 .project-img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); background: var(--bg-soft); }
 figcaption { margin-top: .65rem; color: var(--muted); font-size: .95rem; }
 .footer { padding: 2.2rem 0 2.8rem; color: var(--muted); }
