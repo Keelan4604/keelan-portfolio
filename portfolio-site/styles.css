@@ -70,7 +70,7 @@ figure.card { overflow: hidden; }
 #projectGrid .card h3 { margin: .1rem 0 .45rem; font-size: 1.02rem; }
 #projectGrid .card p { color: var(--muted); margin: 0 0 .75rem; font-size: .95rem; }
 
-.cta-card { display: flex; flex-direction: column; justify-content: space-between; }
+.cta-card { display: block; }
 .footer { padding: 2.2rem 0 2.8rem; color: var(--muted); }
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
 .reveal.show { opacity: 1; transform: none; }
