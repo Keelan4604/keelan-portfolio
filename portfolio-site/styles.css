@@ -26,11 +26,7 @@ body {
   background: radial-gradient(circle at 85% 0%, #2b241d 0%, var(--bg) 34%), var(--bg);
   color: var(--text);
   line-height: 1.6;
-  overflow-x: hidden;
 }
-.parallax-layer { position: fixed; inset: 0; pointer-events: none; z-index: -1; transition: transform .12s linear; }
-.layer-1 { background: radial-gradient(circle at 20% 30%, rgba(200,160,111,.12), transparent 34%); }
-.layer-2 { background: radial-gradient(circle at 80% 10%, rgba(226,191,147,.08), transparent 30%); }
 .container { width: min(1080px, 92%); margin: 0 auto; }
 .topbar { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--bg) 90%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
 .nav { display: flex; align-items: center; gap: 1rem; justify-content: space-between; padding: .85rem 0; }
@@ -41,15 +37,12 @@ nav a:hover, nav a.active { color: var(--camel-strong); }
 .scroll-progress { position: sticky; top: 58px; z-index: 29; height: 2px; background: transparent; }
 .scroll-progress span { display: block; height: 100%; width: 0%; background: var(--camel); transition: width .08s linear; }
 .hero { display: grid; grid-template-columns: 1.45fr .85fr; gap: 1rem; padding: 3.7rem 0 1.8rem; align-items: start; }
-.hero-stack { display: grid; gap: .85rem; }
 .kicker { text-transform: uppercase; letter-spacing: .09em; font-size: .8rem; color: var(--camel-strong); font-weight: 700; }
 h1 { font-size: clamp(1.9rem, 3.8vw, 3rem); line-height: 1.14; margin: .3rem 0 .8rem; }
 .lead { color: var(--muted); max-width: 66ch; }
 .hero-card, .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
 .hero-card { padding: 1rem; text-align: center; }
-.project-peek { text-align: left; }
-.project-peek p { margin: .55rem 0 0; color: var(--muted); font-size: .92rem; }
-.avatar { width: 172px; height: 172px; border-radius: 14px; object-fit: cover; object-position: 50% 18%; display: block; margin: 0 auto .8rem; border: 1px solid var(--line); }
+.avatar { width: 172px; height: 172px; border-radius: 14px; object-fit: cover; object-position: 50% 50%; display: block; margin: 0 auto .8rem; border: 1px solid var(--line); }
 .cta-row { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .65rem; }
 .btn { text-decoration: none; font-weight: 700; padding: .72rem 1rem; border-radius: 12px; background: var(--camel); color: #1d1309; }
 .btn.ghost { background: transparent; border: 1px solid var(--line); color: var(--text); }

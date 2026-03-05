@@ -45,19 +45,6 @@ function installReveal() {
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 }
 
-function installParallax() {
-  const layers = [...document.querySelectorAll('.parallax-layer')];
-  if (!layers.length) return;
-  const update = () => {
-    const y = window.scrollY || 0;
-    layers.forEach(layer => {
-      const speed = Number(layer.dataset.speed || 0.12);
-      layer.style.transform = `translate3d(0, ${y * speed}px, 0)`;
-    });
-  };
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-}
 
 const projectSummaries = {
   'sim7000A-cellular-GSM-connection': 'Arduino LTE CAT-M1 communication node for remote telemetry and command workflows.',
@@ -95,5 +82,4 @@ async function loadProjects() {
 installReveal();
 installScrollProgress();
 installActiveNav();
-installParallax();
 loadProjects();
