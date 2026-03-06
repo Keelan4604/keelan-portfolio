@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8:30 Beer Challenge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🍺 8:30 Beer Challenge</h1>
+      <p class="subtitle">Beat the clock. Track the rounds.</p>
+    </header>
+
+    <section class="timer-card">
+      <div id="timer" class="timer">08:30</div>
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <div class="controls">
+        <button id="startPauseBtn" class="primary">Start</button>
+        <button id="resetBtn">Reset Timer</button>
+        <button id="roundDoneBtn" class="success">Round Complete ✅</button>
+      </div>
+    </section>
+
+    <section class="rounds-card">
+      <h2>Rounds</h2>
+      <div class="rounds-row">
+        <button id="minusRoundBtn">−</button>
+        <div id="roundCount" class="round-count">0</div>
+        <button id="plusRoundBtn">+</button>
+      </div>
+      <p id="statusText" class="status">Ready for round 1.</p>
+    </section>
+
+    <section class="history-card">
+      <h2>Completed Rounds</h2>
+      <ul id="historyList"></ul>
+      <button id="clearHistoryBtn" class="danger">Clear History</button>
+    </section>
+
+    <footer>
+      <small>Tip: Keep this page open and fullscreen for game night.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
