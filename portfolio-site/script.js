@@ -64,7 +64,10 @@ async function loadProjects() {
   try {
     const res = await fetch('./data/projects.json', { cache: 'no-store' });
     const projects = await res.json();
-    const top = projects.filter(p => p?.name).slice(0, 9);
+    const excludedPatterns = [/personal\s*website\s*v?2/i, /website\s*v?2/i];
+    const top = projects
+      .filter(p => p?.name && !excludedPatterns.some(rx => rx.test(p.name)))
+      .slice(0, 9);
     grid.innerHTML = top.map(p => `
       <article class="card reveal">
         <h3>${p.name}</h3>
