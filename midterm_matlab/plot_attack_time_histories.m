@@ -33,5 +33,4 @@ ax.MinorGridColor = [0.8 0.8 0.8];
 ax.LineWidth = 1.0;
 axis tight;
 exportgraphics(fig, filePath, 'Resolution', 300);
-close(fig);
 end

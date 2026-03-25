@@ -18,5 +18,4 @@ ax.FontSize = 14;
 ax.XColor = 'k'; ax.YColor = 'k';
 axis tight;
 exportgraphics(fig, fullfile(figDir,'attack_trajectory_with_intercept.png'), 'Resolution', 300);
-close(fig);
 end

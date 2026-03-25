@@ -68,6 +68,4 @@ write_results_text(results, fullfile(outDir,'results_summary.txt'));
 write_report_text(results, fullfile(outDir,'AEM428_Midterm_Report_Draft.txt'));
 savejson_fallback(results, fullfile(outDir,'results_summary.json'));
 
-fprintf('Project complete. Files written to:\n%s\n', outDir);
-fprintf('Recommended defense launch delay after attack launch: %.6f s\n', launchDelay);
 end
