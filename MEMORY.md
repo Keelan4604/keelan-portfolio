@@ -23,7 +23,14 @@
 - 2026-04-10: Keelan has an 8'2" truck (relevant for Ann Arbor parking, moving, and winter driving considerations).
 - 2026-04-10: Keelan is going to Europe on May 18, 2026 — boys trip (Dublin + Prague) then girlfriend trip (Naples/Amalfi Coast), returning ~June 1.
 - 2026-04-10: UMich Aerospace does NOT guarantee funding for MS students. Out-of-state tuition ~$61K/yr. Side income is critical. Target: SMART Scholarship (opens Aug 1, due Dec 2026), GSRA/GSI positions, and MATLAB tutoring.
-- 2026-04-10: Website sales pipeline now has 24 scored no-website leads in `workspace/website-sales-leads.csv`. Top lead: Holifield Electrical LLC (score 90).
+- 2026-04-10: Website sales pipeline now has 104 scored no-website leads in Google Sheet. Top lead: Holifield Electrical LLC (score 90).
 - 2026-04-10: MATLAB tutoring identified as low-effort income stream ($900-$3,400/mo). Best platform: Wyzant at $60-80/hr. UMich has 12,000+ engineering students.
 - 2026-04-10: AI chatbot upsell is the highest-revenue add-on to website sales ($250-$500/mo recurring per client).
 - 2026-04-10: Overnight agent system fully operational — 6 agents ran successfully on April 9-10 night cycle.
+- 2026-04-11: **18 demo sites live** on Cloudflare Pages. 7 new deployed overnight. Full portfolio at `workspace/WEBSITES/`.
+- 2026-04-11: **Pricing tiers doc** at `pricing-tiers.md` — 4 tiers: GBP $199, Website $500-2K, +Chatbot $997-1.5K+$149/mo, Full Package $2-3K+$249/mo.
+- 2026-04-11: **GBP optimization deliverables** ready at `gbp-optimization-checklist.md` — 9-phase service delivery guide.
+- 2026-04-11: **Idea discovery round 2** — Top pick: Micro-SaaS contractor job tracker (score 76/100). Customer discovery via website sales calls (ask "How do you track jobs?").
+- 2026-04-11: **Cloudflare auth** — OAuth credentials stored at `C:\Users\Keela\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\xdg.config\.wrangler\config\default.toml`. Set `XDG_CONFIG_HOME` to that parent dir for wrangler to work.
+- 2026-04-11: **WhatsApp gateway not active** — `openclaw agent --channel whatsapp` requires active WhatsApp Web listener. Fall back to Gmail draft if gateway is down.
+- 2026-04-11: **37+ Gmail outreach drafts STILL UNSENT** — this is the #1 revenue bottleneck. Only Keelan can send them.
