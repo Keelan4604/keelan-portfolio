@@ -120,6 +120,25 @@ During every website sales call or email, ask:
 
 ---
 
+## Additional Insights (from training data analysis)
+
+### Biggest Technical Differentiator: Offline Mode
+None of the incumbents handle offline well. Contractors work in basements, crawl spaces, rural areas. Building reliable offline-first (view jobs, add notes/photos, create invoices, sync when back online) would be a genuine competitive moat.
+
+### Estimate-to-Invoice Flow is the Core UX
+The magic workflow: create estimate → customer approves → tap "start job" → tap "complete" → tap "invoice" → send via text with "Pay Now" link. In Jobber this is 8-12 clicks. Making it 3-4 taps is the product.
+
+### Supply House Partnerships (Underutilized Channel)
+Contractors visit supply houses (Ferguson, Winsupply, local electrical supply) daily. Counter cards, flyers, or referral deals with supply houses is a distribution channel nobody in SaaS uses. Worth exploring in Ann Arbor.
+
+### Recommended Pricing (Refined)
+- **Starter: $29/mo** — 1 user, unlimited jobs/estimates/invoices/payments
+- **Crew: $49/mo** — up to 5 users, team scheduling, customer notifications
+- No per-user fees. No annual lock-in. Month-to-month.
+- Position directly under Jobber ($69/mo Core) and above the "free = sketchy" threshold.
+
+---
+
 ## Recommended Next Steps
 
 1. **This week:** Add customer discovery questions to the phone outreach script
