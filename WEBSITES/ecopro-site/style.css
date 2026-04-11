@@ -1359,6 +1359,44 @@ button {
   object-fit: contain;
 }
 
+.product-img-placeholder {
+  width: 100%;
+  min-height: 240px;
+  background: linear-gradient(135deg, var(--color-navy-mid), var(--color-navy));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: var(--space-xl);
+  letter-spacing: 0.02em;
+}
+
+.product-interest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.product-interest-grid label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.95rem;
+  color: var(--color-gray-700);
+  cursor: pointer;
+}
+
+.product-interest-grid input[type="checkbox"] {
+  accent-color: var(--color-accent);
+  width: 16px;
+  height: 16px;
+}
+
 .product-detail-desc {
   font-size: 1.02rem;
   color: var(--color-gray-500);
