@@ -22,6 +22,7 @@
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="products.html" class="nav-link active">Products</a></li>
           <li><a href="results.html" class="nav-link">Results</a></li>
+          <li><a href="techcorner.html" class="nav-link">Tech Corner</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -53,34 +54,71 @@
         <div class="product-detail-body reveal">
           <p class="section-eyebrow">Air Filtration</p>
           <h2 class="section-title">Turbo II HD PreCleaner</h2>
-          <p class="product-detail-desc">The Turbo II HD PreCleaner is a centrifugal pre-cleaning system with over 40 years of proven performance. It removes up to 90% of airborne contaminants before they reach your primary air filter — extending engine air filter life 3-5x in the harshest dust environments.</p>
-          <p class="product-detail-desc">With just one moving part and a lifetime-warranted spinner, the Turbo II delivers low-maintenance, high-reliability filtration for loaders, graders, haulers, dozers, and more.</p>
-          <div class="product-specs">
-            <div class="spec-item">
-              <span class="spec-value">80-90%</span>
-              <span class="spec-label">Improved Filtration</span>
+          <div class="product-tabs">
+            <div class="tab-nav">
+              <button class="tab-btn active" data-tab="turbo-desc">Description</button>
+              <button class="tab-btn" data-tab="turbo-specs">Key Specs</button>
+              <button class="tab-btn" data-tab="turbo-apps">Applications</button>
+              <button class="tab-btn" data-tab="turbo-warranty">Warranty</button>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">3-5x</span>
-              <span class="spec-label">Filter Life Extension</span>
+            <div class="tab-panel active" id="turbo-desc">
+              <p class="product-detail-desc">The Turbo II HD PreCleaner is a centrifugal pre-cleaning system with over 40 years of proven performance. It removes up to 90% of airborne contaminants before they reach your primary air filter — extending engine air filter life 3-5x in the harshest dust environments.</p>
+              <p class="product-detail-desc">With just one moving part and a lifetime-warranted spinner, the Turbo II delivers low-maintenance, high-reliability filtration for loaders, graders, haulers, dozers, and more.</p>
+              <ul class="product-feature-list">
+                <li>Centrifugal pre-cleaning technology</li>
+                <li>Lifetime-warranted spinner</li>
+                <li>Reduces engine air filter costs by up to 80%</li>
+                <li>Will not void equipment warranty</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">1</span>
-              <span class="spec-label">Moving Part</span>
+            <div class="tab-panel" id="turbo-specs">
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-value">80-90%</span>
+                  <span class="spec-label">Improved Filtration</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">3-5x</span>
+                  <span class="spec-label">Filter Life Extension</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">1</span>
+                  <span class="spec-label">Moving Part</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">SAE J726</span>
+                  <span class="spec-label">Independently Tested</span>
+                </div>
+              </div>
+              <ul class="product-feature-list">
+                <li>Centrifugal separation removes dust, debris, rain, and snow</li>
+                <li>Pre-cleans air before it reaches the primary filter</li>
+                <li>Sizes from 2" to 12" inlet diameters</li>
+                <li>Stainless steel and aluminum construction options</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">SAE J726</span>
-              <span class="spec-label">Independently Tested</span>
+            <div class="tab-panel" id="turbo-apps">
+              <p class="product-detail-desc">The Turbo II HD is proven across virtually every heavy equipment application where airborne dust and debris threaten engine performance:</p>
+              <ul class="product-feature-list">
+                <li>Wheel loaders, graders, and haulers</li>
+                <li>Dozers and excavators</li>
+                <li>Mining and quarry equipment</li>
+                <li>Landfill compactors and packers</li>
+                <li>Agricultural equipment</li>
+                <li>Generators, compressors, and stationary engines</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="turbo-warranty">
+              <p class="product-detail-desc">The Turbo II HD PreCleaner comes with a <strong>lifetime warranty on the spinner</strong> — the only moving part. The body carries a standard manufacturer warranty against defects in materials and workmanship.</p>
+              <ul class="product-feature-list">
+                <li>Lifetime spinner warranty</li>
+                <li>Will not void OEM equipment warranty</li>
+                <li>Backed by 40+ years of field-proven reliability</li>
+                <li>Full EcoPro USA support from selection through installation</li>
+              </ul>
             </div>
           </div>
-          <ul class="product-feature-list">
-            <li>Centrifugal pre-cleaning technology</li>
-            <li>Lifetime-warranted spinner</li>
-            <li>Fits loaders, graders, haulers, dozers & more</li>
-            <li>Reduces engine air filter costs by up to 80%</li>
-            <li>Will not void equipment warranty</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary btn-lg">Request a Quote</a>
+          <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:var(--space-lg)">Request a Quote</a>
         </div>
       </div>
     </div>
@@ -98,34 +136,71 @@
         <div class="product-detail-body reveal">
           <p class="section-eyebrow">Operator Protection</p>
           <h2 class="section-title">Cabin Air Pressurizer</h2>
-          <p class="product-detail-desc">The Clean Cab Air Pressurizer (CCAP) is a three-stage filtration system that pressurizes equipment cabs to deliver air 200x cleaner than leading competitors at 0.3 microns. A German-engineered motor in a powder-coated steel enclosure provides reliable, long-lasting protection.</p>
-          <p class="product-detail-desc">With 2,000-hour filter life and equipment-specific installation kits, the CCAP keeps operators breathing clean air in the most demanding environments — landfills, mines, recycling facilities, and construction sites.</p>
-          <div class="product-specs">
-            <div class="spec-item">
-              <span class="spec-value">99.998%</span>
-              <span class="spec-label">Efficient at 0.3 Microns</span>
+          <div class="product-tabs">
+            <div class="tab-nav">
+              <button class="tab-btn active" data-tab="cabin-desc">Description</button>
+              <button class="tab-btn" data-tab="cabin-specs">Key Specs</button>
+              <button class="tab-btn" data-tab="cabin-apps">Applications</button>
+              <button class="tab-btn" data-tab="cabin-warranty">Warranty</button>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">200x</span>
-              <span class="spec-label">Cleaner Than Competitors</span>
+            <div class="tab-panel active" id="cabin-desc">
+              <p class="product-detail-desc">The Clean Cab Air Pressurizer (CCAP) is a three-stage filtration system that pressurizes equipment cabs to deliver air 200x cleaner than leading competitors at 0.3 microns. A German-engineered motor in a powder-coated steel enclosure provides reliable, long-lasting protection.</p>
+              <p class="product-detail-desc">With 2,000-hour filter life and equipment-specific installation kits, the CCAP keeps operators breathing clean air in the most demanding environments.</p>
+              <ul class="product-feature-list">
+                <li>Three-stage filtration system</li>
+                <li>German-engineered motor</li>
+                <li>Powder-coated steel enclosure</li>
+                <li>Positive pressure prevents contaminant entry</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">2,000 hr</span>
-              <span class="spec-label">Filter Life</span>
+            <div class="tab-panel" id="cabin-specs">
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-value">99.998%</span>
+                  <span class="spec-label">Efficient at 0.3 Microns</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">200x</span>
+                  <span class="spec-label">Cleaner Than Competitors</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">2,000 hr</span>
+                  <span class="spec-label">Filter Life</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">25,000 hr</span>
+                  <span class="spec-label">Proven in Operation</span>
+                </div>
+              </div>
+              <ul class="product-feature-list">
+                <li>Three-stage HEPA-grade filtration</li>
+                <li>Pressurizes cab to keep contaminants out</li>
+                <li>German-engineered brushless motor</li>
+                <li>Powder-coated steel enclosure for durability</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">25,000 hr</span>
-              <span class="spec-label">Proven in Operation</span>
+            <div class="tab-panel" id="cabin-apps">
+              <p class="product-detail-desc">The CCAP is designed for any enclosed cab environment where operators face airborne hazards:</p>
+              <ul class="product-feature-list">
+                <li>Landfills and transfer stations</li>
+                <li>Mining and quarry operations</li>
+                <li>Recycling facilities</li>
+                <li>Construction and demolition sites</li>
+                <li>Agricultural environments</li>
+                <li>Equipment-specific kits available for 16+ machine models</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="cabin-warranty">
+              <p class="product-detail-desc">The CCAP is backed by a manufacturer warranty covering defects in materials and workmanship. Extended warranty options are available through EcoPro USA.</p>
+              <ul class="product-feature-list">
+                <li>Standard manufacturer warranty included</li>
+                <li>Will not void OEM equipment warranty</li>
+                <li>25,000+ hours proven in real-world operation</li>
+                <li>Full EcoPro USA support from selection through installation</li>
+              </ul>
             </div>
           </div>
-          <ul class="product-feature-list">
-            <li>Three-stage filtration system</li>
-            <li>German-engineered motor</li>
-            <li>Powder-coated steel enclosure</li>
-            <li>Equipment-specific kits available</li>
-            <li>Positive pressure prevents contaminant entry</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary btn-lg">Request a Quote</a>
+          <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:var(--space-lg)">Request a Quote</a>
         </div>
       </div>
     </div>
@@ -143,34 +218,70 @@
         <div class="product-detail-body reveal">
           <p class="section-eyebrow">Visibility & Safety</p>
           <h2 class="section-title">LED HD Lights</h2>
-          <p class="product-detail-desc">The H30 Series mining-grade LED work lights are built to withstand extreme vibration, high-pressure washdowns, and the harshest operating environments. Sealed construction with plug-and-play DT connectors means easy installation and maximum reliability.</p>
-          <p class="product-detail-desc">Designed for mining, construction, landfill, and heavy equipment applications where standard lights fail. These lights outlast and outperform anything else on the market.</p>
-          <div class="product-specs">
-            <div class="spec-item">
-              <span class="spec-value">Mining</span>
-              <span class="spec-label">Grade Durability</span>
+          <div class="product-tabs">
+            <div class="tab-nav">
+              <button class="tab-btn active" data-tab="led-desc">Description</button>
+              <button class="tab-btn" data-tab="led-specs">Key Specs</button>
+              <button class="tab-btn" data-tab="led-apps">Applications</button>
+              <button class="tab-btn" data-tab="led-warranty">Warranty</button>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">Sealed</span>
-              <span class="spec-label">Construction</span>
+            <div class="tab-panel active" id="led-desc">
+              <p class="product-detail-desc">The H30 Series mining-grade LED work lights are built to withstand extreme vibration, high-pressure washdowns, and the harshest operating environments. Sealed construction with plug-and-play DT connectors means easy installation and maximum reliability.</p>
+              <p class="product-detail-desc">Designed for mining, construction, landfill, and heavy equipment applications where standard lights fail. Available as work lights, beacons, and LED upgrade kits.</p>
+              <ul class="product-feature-list">
+                <li>Extreme vibration rated</li>
+                <li>High-pressure washdown safe</li>
+                <li>Plug-and-play DT connectors</li>
+                <li>Superior light output and spread</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">DT</span>
-              <span class="spec-label">Plug-and-Play</span>
+            <div class="tab-panel" id="led-specs">
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-value">Mining</span>
+                  <span class="spec-label">Grade Durability</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">Sealed</span>
+                  <span class="spec-label">Construction</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">DT</span>
+                  <span class="spec-label">Plug-and-Play</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">H30</span>
+                  <span class="spec-label">Series</span>
+                </div>
+              </div>
+              <ul class="product-feature-list">
+                <li>Sealed, rugged aluminum housing</li>
+                <li>Vibration-resistant mounting system</li>
+                <li>High-pressure washdown rated</li>
+                <li>DuraLux Gen 2 LED technology</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">H30</span>
-              <span class="spec-label">Series</span>
+            <div class="tab-panel" id="led-apps">
+              <p class="product-detail-desc">Our LED lighting lineup covers three categories for complete fleet visibility:</p>
+              <ul class="product-feature-list">
+                <li><strong>Work Lights:</strong> H30 Series for loaders, haulers, dozers, and excavators</li>
+                <li><strong>Beacons:</strong> High-visibility warning lights for safety compliance</li>
+                <li><strong>LED Upgrade Kits:</strong> Drop-in replacements for OEM halogen and HID fixtures</li>
+                <li>Mining, construction, landfill, and quarry environments</li>
+                <li>Night shift and low-visibility operations</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="led-warranty">
+              <p class="product-detail-desc">LED HD Lights are backed by a manufacturer warranty against defects in materials and workmanship under normal operating conditions.</p>
+              <ul class="product-feature-list">
+                <li>Standard manufacturer warranty included</li>
+                <li>Will not void OEM equipment warranty</li>
+                <li>Plug-and-play installation — no wiring modifications</li>
+                <li>Full EcoPro USA support and replacement assistance</li>
+              </ul>
             </div>
           </div>
-          <ul class="product-feature-list">
-            <li>Extreme vibration rated</li>
-            <li>High-pressure washdown safe</li>
-            <li>Plug-and-play DT connectors</li>
-            <li>Sealed, rugged construction</li>
-            <li>Superior light output and spread</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary btn-lg">Request a Quote</a>
+          <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:var(--space-lg)">Request a Quote</a>
         </div>
       </div>
     </div>
@@ -188,34 +299,71 @@
         <div class="product-detail-body reveal">
           <p class="section-eyebrow">Fluid Protection</p>
           <h2 class="section-title">Desiccant Breathers</h2>
-          <p class="product-detail-desc">Protect your diesel and lubricant storage from moisture and airborne contaminants. Color-changing silica gel provides a clear visual indicator when replacement is needed — no guesswork, no missed maintenance windows.</p>
-          <p class="product-detail-desc">These breathers prevent rust, sludge, and microbial growth in tanks and reservoirs, keeping your fluids clean and your equipment running longer. Low-profile options available for space-constrained installations.</p>
-          <div class="product-specs">
-            <div class="spec-item">
-              <span class="spec-value">Visual</span>
-              <span class="spec-label">Change Indicator</span>
+          <div class="product-tabs">
+            <div class="tab-nav">
+              <button class="tab-btn active" data-tab="des-desc">Description</button>
+              <button class="tab-btn" data-tab="des-specs">Key Specs</button>
+              <button class="tab-btn" data-tab="des-apps">Applications</button>
+              <button class="tab-btn" data-tab="des-warranty">Warranty</button>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">Diesel</span>
-              <span class="spec-label">& Lubricant Safe</span>
+            <div class="tab-panel active" id="des-desc">
+              <p class="product-detail-desc">Protect your diesel and lubricant storage from moisture and airborne contaminants. Color-changing silica gel provides a clear visual indicator when replacement is needed — no guesswork, no missed maintenance windows.</p>
+              <p class="product-detail-desc">These breathers prevent rust, sludge, and microbial growth in tanks and reservoirs, keeping your fluids clean and your equipment running longer.</p>
+              <ul class="product-feature-list">
+                <li>Color-changing replacement indicator</li>
+                <li>Moisture and contaminant protection</li>
+                <li>Prevents microbial growth</li>
+                <li>Easy installation on existing tanks</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">Low</span>
-              <span class="spec-label">Profile Options</span>
+            <div class="tab-panel" id="des-specs">
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-value">Visual</span>
+                  <span class="spec-label">Change Indicator</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">Diesel</span>
+                  <span class="spec-label">& Lubricant Safe</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">Low</span>
+                  <span class="spec-label">Profile Options</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">Prevents</span>
+                  <span class="spec-label">Rust & Sludge</span>
+                </div>
+              </div>
+              <ul class="product-feature-list">
+                <li>Reduces particulate and moisture contamination</li>
+                <li>Silica gel desiccant with color-change saturation indicator</li>
+                <li>Multiple sizes and thread configurations</li>
+                <li>Low-profile options for space-constrained installations</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">Prevents</span>
-              <span class="spec-label">Rust & Sludge</span>
+            <div class="tab-panel" id="des-apps">
+              <p class="product-detail-desc">Desiccant breathers protect any tank or reservoir that breathes ambient air:</p>
+              <ul class="product-feature-list">
+                <li>Diesel fuel storage tanks</li>
+                <li>Hydraulic oil reservoirs</li>
+                <li>Lubricant storage tanks</li>
+                <li>Gearboxes and transmission housings</li>
+                <li>Bulk fluid storage at maintenance facilities</li>
+                <li>Any application where moisture contamination degrades fluid life</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="des-warranty">
+              <p class="product-detail-desc">Desiccant breathers are consumable products designed to be replaced when the silica gel indicator changes color. Each unit is backed by a manufacturer warranty against defects.</p>
+              <ul class="product-feature-list">
+                <li>Manufacturer warranty against defects</li>
+                <li>Visual indicator eliminates guesswork on replacement timing</li>
+                <li>Will not void equipment warranty</li>
+                <li>Full EcoPro USA support for sizing and installation</li>
+              </ul>
             </div>
           </div>
-          <ul class="product-feature-list">
-            <li>Color-changing replacement indicator</li>
-            <li>Moisture and contaminant protection</li>
-            <li>Prevents microbial growth</li>
-            <li>Multiple sizes and configurations</li>
-            <li>Easy installation on existing tanks</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary btn-lg">Request a Quote</a>
+          <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:var(--space-lg)">Request a Quote</a>
         </div>
       </div>
     </div>
@@ -233,34 +381,70 @@
         <div class="product-detail-body reveal">
           <p class="section-eyebrow">Custom Fabrication</p>
           <h2 class="section-title">Metal Adapters</h2>
-          <p class="product-detail-desc">In-house manufactured metal stack extensions, expansion adapters, and custom brackets built to your exact specifications. Our precision metal spinning and bracket design capabilities mean we can create the right fit for any application.</p>
-          <p class="product-detail-desc">From HVAC access panels to custom exhaust stack extensions — if you need it fabricated, we can build it. Every adapter comes with a 90-day warranty.</p>
-          <div class="product-specs">
-            <div class="spec-item">
-              <span class="spec-value">In-House</span>
-              <span class="spec-label">Manufacturing</span>
+          <div class="product-tabs">
+            <div class="tab-nav">
+              <button class="tab-btn active" data-tab="adapt-desc">Description</button>
+              <button class="tab-btn" data-tab="adapt-specs">Key Specs</button>
+              <button class="tab-btn" data-tab="adapt-apps">Applications</button>
+              <button class="tab-btn" data-tab="adapt-warranty">Warranty</button>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">Custom</span>
-              <span class="spec-label">To Your Specs</span>
+            <div class="tab-panel active" id="adapt-desc">
+              <p class="product-detail-desc">In-house manufactured metal stack extensions, expansion adapters, and custom brackets built to your exact specifications. Our precision metal spinning and bracket design capabilities mean we can create the right fit for any application.</p>
+              <p class="product-detail-desc">From HVAC access panels to custom exhaust stack extensions — if you need it fabricated, we can build it.</p>
+              <ul class="product-feature-list">
+                <li>Stack extensions & expansion adapters</li>
+                <li>Custom brackets and mounts</li>
+                <li>HVAC access panels</li>
+                <li>Precision metal spinning</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">90-Day</span>
-              <span class="spec-label">Warranty</span>
+            <div class="tab-panel" id="adapt-specs">
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-value">In-House</span>
+                  <span class="spec-label">Manufacturing</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">Custom</span>
+                  <span class="spec-label">To Your Specs</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">90-Day</span>
+                  <span class="spec-label">Warranty</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-value">Precision</span>
+                  <span class="spec-label">Metal Spinning</span>
+                </div>
+              </div>
+              <ul class="product-feature-list">
+                <li>Steel and aluminum construction options</li>
+                <li>Precision metal spinning for round adapters</li>
+                <li>Custom bracket design and fabrication</li>
+                <li>Built to exact OEM or custom specifications</li>
+              </ul>
             </div>
-            <div class="spec-item">
-              <span class="spec-value">Precision</span>
-              <span class="spec-label">Metal Spinning</span>
+            <div class="tab-panel" id="adapt-apps">
+              <p class="product-detail-desc">Metal adapters solve fitment challenges across all heavy equipment types:</p>
+              <ul class="product-feature-list">
+                <li>Exhaust stack extensions for pre-cleaner mounting</li>
+                <li>Expansion adapters for mismatched diameters</li>
+                <li>Custom mounting brackets for CCAP and lighting</li>
+                <li>HVAC access panels for cab maintenance</li>
+                <li>Any custom metal fabrication need for equipment fleets</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="adapt-warranty">
+              <p class="product-detail-desc">Every metal adapter manufactured by EcoPro USA carries a <strong>90-day warranty</strong> against defects in materials and workmanship.</p>
+              <ul class="product-feature-list">
+                <li>90-day warranty on all adapters</li>
+                <li>In-house manufacturing ensures quality control</li>
+                <li>Will not void OEM equipment warranty</li>
+                <li>Custom re-fabrication available if specs change</li>
+              </ul>
             </div>
           </div>
-          <ul class="product-feature-list">
-            <li>Stack extensions & expansion adapters</li>
-            <li>Custom brackets and mounts</li>
-            <li>HVAC access panels</li>
-            <li>Precision metal spinning</li>
-            <li>Built to exact specifications</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary btn-lg">Request a Quote</a>
+          <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:var(--space-lg)">Request a Quote</a>
         </div>
       </div>
     </div>
@@ -763,6 +947,7 @@
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="results.html">Results</a></li>
+            <li><a href="techcorner.html">Tech Corner</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>

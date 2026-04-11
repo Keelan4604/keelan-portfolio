@@ -176,6 +176,29 @@
     }
   }
 
+  /* ---------- Product tabs ---------- */
+  document.querySelectorAll('.tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var tabsContainer = this.closest('.product-tabs');
+      var targetId = this.getAttribute('data-tab');
+
+      // Deactivate all tabs in this container
+      tabsContainer.querySelectorAll('.tab-btn').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      tabsContainer.querySelectorAll('.tab-panel').forEach(function (p) {
+        p.classList.remove('active');
+      });
+
+      // Activate clicked tab
+      this.classList.add('active');
+      var targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    });
+  });
+
   /* ---------- Smooth scroll for anchor links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {

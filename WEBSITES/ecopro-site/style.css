@@ -1818,6 +1818,208 @@ button {
   }
 }
 
+/* ---------- Founder Section (About Page) ---------- */
+.founder-section {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.founder-portrait {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-xl));
+}
+
+.founder-portrait-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-gray-100) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-200);
+  border: 1px solid var(--color-gray-100);
+}
+
+.founder-message .section-title {
+  text-align: left;
+}
+
+/* ---------- Product Tabs ---------- */
+.product-tabs {
+  margin-top: var(--space-md);
+}
+
+.tab-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--color-gray-100);
+  margin-bottom: var(--space-xl);
+}
+
+.tab-btn {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--color-navy);
+}
+
+.tab-btn.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+  animation: tabFadeIn 0.3s ease;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Tech Corner ---------- */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.tech-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  border: 1px solid var(--color-gray-100);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.tech-card-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  background: rgba(59, 156, 255, 0.08);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+  align-self: flex-start;
+}
+
+.tech-card-badge--service {
+  color: var(--color-success);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.tech-card-icon {
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.tech-card-icon--service {
+  color: var(--color-success);
+}
+
+.tech-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--space-sm);
+  line-height: 1.35;
+}
+
+.tech-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-500);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  flex: 1;
+}
+
+.tech-card-meta {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.tech-card-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+  background: var(--color-off-white);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+/* Tech Corner & Founder responsive */
+@media (max-width: 1024px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .founder-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .founder-portrait {
+    position: static;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .founder-message .section-title {
+    text-align: center;
+  }
+
+  .founder-message .section-eyebrow {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.82rem;
+  }
+}
+
 /* ---------- Desktop enhancements ---------- */
 @media (min-width: 1025px) {
   .header-actions .btn-sm {
