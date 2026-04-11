@@ -25,6 +25,11 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2rem;display:flex;j
 .nav-links a:hover{color:var(--teal-light)}
 .nav-cta{background:var(--teal);color:var(--white);padding:.6rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.85rem;transition:all .3s;border:2px solid var(--teal)}
 .nav-cta:hover{background:transparent;color:var(--teal-light)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.5rem}
+.nav-hamburger span{width:24px;height:2px;background:var(--gray);border-radius:2px;transition:all .3s}
+.nav-hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-hamburger.active span:nth-child(2){opacity:0}
+.nav-hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 5% 4rem;position:relative;overflow:hidden}
@@ -105,7 +110,9 @@ footer p{color:var(--gray);font-size:.8rem;font-weight:300}
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;gap:3rem;padding:7rem 5% 3rem}
   .hero-card{width:100%;max-width:400px}
-  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:rgba(10,22,40,0.95);backdrop-filter:blur(20px);flex-direction:column;padding:1.5rem 2rem;gap:1rem;border-bottom:1px solid rgba(13,148,136,0.2)}
+  .nav-links.open{display:flex}
   .why-grid{grid-template-columns:1fr;gap:2rem}
   .services-grid{grid-template-columns:1fr}
   .cta-box{padding:3rem 1.5rem}
@@ -126,6 +133,9 @@ footer p{color:var(--gray);font-size:.8rem;font-weight:300}
     <li><a href="#why">Why Us</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open');this.classList.toggle('active')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <a href="tel:4049010435" class="nav-cta">Call Now</a>
 </nav>
 
