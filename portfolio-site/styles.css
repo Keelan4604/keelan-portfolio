@@ -440,6 +440,81 @@ body {
   .orb-3 { width: 200px; height: 200px; }
 }
 
+/* ===== AEROSPACE BLUEPRINT GRID BACKGROUND ===== */
+.blueprint-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Orbit paths decoration */
+.orbit-paths {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120vmax;
+  height: 120vmax;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.025;
+}
+
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  border-radius: 50%;
+}
+
+.orbit-ring-1 {
+  width: 40%;
+  height: 40%;
+  animation: orbit-spin 60s linear infinite;
+}
+
+.orbit-ring-2 {
+  width: 65%;
+  height: 65%;
+  animation: orbit-spin 90s linear infinite reverse;
+}
+
+.orbit-ring-3 {
+  width: 90%;
+  height: 90%;
+  animation: orbit-spin 120s linear infinite;
+}
+
+@keyframes orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ===== PROJECT CARD LINK RESET ===== */
+a.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ===== CONTACT FORM ===== */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgba(10, 10, 15, 1) inset;
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+}
+
 /* ===== SMOOTH PAGE TRANSITIONS ===== */
 body {
   opacity: 0;

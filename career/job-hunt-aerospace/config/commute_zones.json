@@ -1,0 +1,58 @@
+{
+  "anchor": {
+    "name": "NC State University, Raleigh, NC",
+    "city": "Raleigh",
+    "state": "NC"
+  },
+  "distance_buckets": {
+    "raleigh_core": {
+      "label": "Raleigh core",
+      "max_minutes": 25,
+      "max_miles": 15,
+      "score_bonus": 5
+    },
+    "triangle_commute": {
+      "label": "Triangle commute",
+      "max_minutes": 45,
+      "max_miles": 30,
+      "score_bonus": 3
+    },
+    "extended_drive": {
+      "label": "Extended drive",
+      "max_minutes": 75,
+      "max_miles": 55,
+      "score_bonus": 1
+    },
+    "too_far": {
+      "label": "Too far",
+      "min_minutes": 76,
+      "min_miles": 56,
+      "score_bonus": -4
+    }
+  },
+  "location_lookup": {
+    "raleigh, nc": {"bucket": "Raleigh core", "minutes": 10, "miles": 5},
+    "cary, nc": {"bucket": "Raleigh core", "minutes": 20, "miles": 10},
+    "morrisville, nc": {"bucket": "Triangle commute", "minutes": 25, "miles": 18},
+    "durham, nc": {"bucket": "Triangle commute", "minutes": 35, "miles": 26},
+    "research triangle park, nc": {"bucket": "Triangle commute", "minutes": 30, "miles": 20},
+    "rtp, nc": {"bucket": "Triangle commute", "minutes": 30, "miles": 20},
+    "chapel hill, nc": {"bucket": "Triangle commute", "minutes": 40, "miles": 30},
+    "apex, nc": {"bucket": "Triangle commute", "minutes": 30, "miles": 18},
+    "holly springs, nc": {"bucket": "Triangle commute", "minutes": 35, "miles": 22},
+    "garner, nc": {"bucket": "Raleigh core", "minutes": 20, "miles": 12},
+    "wake forest, nc": {"bucket": "Triangle commute", "minutes": 35, "miles": 20},
+    "hillsborough, nc": {"bucket": "Extended drive", "minutes": 55, "miles": 40},
+    "burlington, nc": {"bucket": "Extended drive", "minutes": 70, "miles": 53},
+    "greensboro, nc": {"bucket": "Too far", "minutes": 85, "miles": 78},
+    "winston-salem, nc": {"bucket": "Too far", "minutes": 105, "miles": 95},
+    "fayetteville, nc": {"bucket": "Extended drive", "minutes": 70, "miles": 63},
+    "southern pines, nc": {"bucket": "Extended drive", "minutes": 70, "miles": 65},
+    "pinehurst, nc": {"bucket": "Extended drive", "minutes": 80, "miles": 70},
+    "goldsboro, nc": {"bucket": "Extended drive", "minutes": 70, "miles": 60},
+    "wilson, nc": {"bucket": "Extended drive", "minutes": 55, "miles": 48},
+    "charlotte, nc": {"bucket": "Too far", "minutes": 160, "miles": 170},
+    "melbourne, fl": {"bucket": "Too far", "minutes": 999, "miles": 650},
+    "south burlington, vt": {"bucket": "Too far", "minutes": 999, "miles": 900}
+  }
+}

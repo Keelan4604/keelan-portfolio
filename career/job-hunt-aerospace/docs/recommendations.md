@@ -1,28 +1,53 @@
 # Recommendations
 
-## Current state
-- Local tracker exists
-- Google Sheet exists and is now seeded
-- First-pass roles added
-- 3-agent architecture documented
+## Best way to optimize this search
+For Keelan's situation, the winning system is **not** "scrape literally everything."
+It is:
 
-## Updated directive
-The search is now strictly focused on jobs within very close, practical driving distance from Raleigh.
-Anything outside that zone should be filtered out unless Keelan explicitly changes the rule later.
+1. **Anchor on Raleigh/Triangle-first employers and boards**
+   - local aerospace
+   - defense hardware
+   - autonomy/UAV
+   - hardware test/validation
+   - systems/integration
+2. **Separate raw discovery from ranked tracker**
+   - dump noisy finds into `data/discovery/manual_leads.csv`
+   - only push scored, filtered roles into `tracker/job_tracker.csv`
+3. **Score for grad-school compatibility, not just title prestige**
+   - Raleigh core and Triangle commute should dominate ranking
+4. **Generate application packets only for top roles**
+   - avoid wasting time on generic cover letters for weak jobs
+5. **Use the Google Sheet as the dashboard, not the raw ingest bucket**
 
-## Next improvements
-1. Purge non-Raleigh roles from the tracker
-2. Add Raleigh-distance scoring columns to the tracker
-3. Create company dossiers for top Raleigh-area targets
-4. Create 3 resume variants
-5. Keep sync script as the one-command push to Google Sheets
-6. Run weekly local search sweeps and follow-up reminders
+## Practical source strategy
+### Tier 1 - highest-value recurring checks
+- BETA Careers
+- RTX / Collins Aerospace
+- Honeywell Careers
+- GE Aerospace Careers
+- Northrop Grumman Careers
+- Sierra Nevada Corporation Careers
+- Handshake
 
-## Best immediate targets
-- BETA Raleigh hardware/systems roles
-- Triangle hardware validation / test roles
-- RTP defense or autonomy hardware employers
-- Raleigh-area engineering roles compatible with NC State graduate school
+### Tier 2 - good for discovery, must validate
+- LinkedIn Jobs
+- Google search queries
+- Lever boards
+- Greenhouse boards
+- Ashby boards
 
-## Working principle
-A strong local role that fits the graduate-school plan is worth more than a cooler-sounding far-away aerospace role.
+### Tier 3 - backup lanes
+- staffing/contract boards like Latitude Inc
+- local manufacturing/hardware employers with aerospace overlap
+
+## Current blocker
+The system is ready for role discovery/ranking, but custom cover letters will get much better once Keelan's current resume and an existing strong cover letter are placed somewhere accessible in or near the workspace.
+
+## Immediate operating loop
+- Add leads weekly
+- Rebuild tracker
+- Generate folders for `Apply now`
+- Paste the real job descriptions
+- Tailor resume + cover letter
+- Apply
+- Sync sheet

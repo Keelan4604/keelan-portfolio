@@ -6,10 +6,46 @@
   <title>Keelan O'Doherty | Aerospace Engineer & Developer</title>
   <meta name="description" content="Keelan O'Doherty — Aerospace Engineer. CFD, FEA, orbital mechanics, and flight dynamics. BS from University of Alabama, MS at University of Michigan." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="keywords" content="Keelan O'Doherty, aerospace engineer, CFD, FEA, computational fluid dynamics, University of Michigan, University of Alabama, web developer, MATLAB, ANSYS Fluent" />
+  <meta name="author" content="Keelan O'Doherty" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://keelanodoherty.org" />
   <meta property="og:title" content="Keelan O'Doherty | Aerospace Engineer & Developer" />
   <meta property="og:description" content="Aerospace engineer specializing in CFD, structural analysis, and computational methods. BS from Alabama, MS at University of Michigan." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://keelanodoherty.org" />
+  <meta property="og:image" content="https://keelanodoherty.org/og-image.png" />
+  <meta property="og:site_name" content="Keelan O'Doherty Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keelan O'Doherty | Aerospace Engineer & Developer" />
+  <meta name="twitter:description" content="Aerospace engineer specializing in CFD, structural analysis, and computational methods." />
   <meta name="theme-color" content="#0a0a0f" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Keelan O'Doherty",
+    "url": "https://keelanodoherty.org",
+    "jobTitle": "Aerospace Engineer",
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Alabama",
+        "sameAs": "https://www.ua.edu"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Michigan",
+        "sameAs": "https://umich.edu"
+      }
+    ],
+    "knowsAbout": ["Aerospace Engineering", "CFD", "FEA", "Computational Fluid Dynamics", "Structural Analysis", "Web Development", "MATLAB", "ANSYS Fluent"],
+    "sameAs": [
+      "https://github.com/Keelan4604",
+      "https://linkedin.com/in/keelanodoherty"
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -35,6 +71,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-surface text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- ===== AEROSPACE BACKGROUND ELEMENTS ===== -->
+  <div class="blueprint-bg"></div>
+  <div class="orbit-paths">
+    <div class="orbit-ring orbit-ring-1"></div>
+    <div class="orbit-ring orbit-ring-2"></div>
+    <div class="orbit-ring orbit-ring-3"></div>
+  </div>
 
   <!-- ===== CURSOR GLOW ===== -->
   <div id="cursor-glow" class="pointer-events-none fixed w-[600px] h-[600px] rounded-full opacity-0 z-50 transition-opacity duration-300" style="background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);"></div>
@@ -162,13 +206,13 @@
           </div>
           <div class="reveal-up space-y-5 text-white/50 text-lg leading-relaxed">
             <p>
-              I've been fascinated by flight and space for as long as I can remember. I earned my <span class="text-white/80">BS in Aerospace Engineering from the University of Alabama</span>, where I dove deep into aerodynamics, propulsion, orbital mechanics, and structural analysis. Now I'm headed to the <span class="text-white/80">University of Michigan for my Master's</span>, where I plan to push further into computational methods and advanced aerospace systems.
+              I grew up taking things apart to figure out how they worked -- RC planes, computers, anything with moving parts. That curiosity led me to aerospace engineering, where the stakes are higher and the physics is beautiful. I earned my <span class="text-white/80">BS in Aerospace Engineering from the University of Alabama</span>, studying everything from supersonic flow to orbital transfers. Now I'm at the <span class="text-white/80">University of Michigan for my Master's</span>, pushing deeper into computational methods and advanced aerospace systems.
             </p>
             <p>
-              My core strengths are in <span class="text-white/80">CFD</span>, <span class="text-white/80">finite element analysis</span>, and <span class="text-white/80">flight dynamics</span> -- I love translating physical problems into simulations and optimizing designs through computation. I'm fluent in MATLAB, ANSYS Fluent, SolidWorks, and CATIA.
+              I'm most at home at the intersection of <span class="text-white/80">physics and code</span>. My work in <span class="text-white/80">CFD</span> and <span class="text-white/80">finite element analysis</span> is about turning real-world aerodynamic and structural problems into simulations that reveal better designs. I'm fluent in MATLAB, ANSYS Fluent, SolidWorks, and CATIA -- and I write the scripts to automate the analysis pipeline too.
             </p>
             <p>
-              On the side, I also build software -- from automation frameworks to websites for local businesses. I believe the best aerospace engineers are the ones who can both <span class="text-white/80">design the hardware</span> and <span class="text-white/80">write the code</span> to analyze it.
+              Outside the lab, I build software and websites for local businesses. I believe the best engineers are the ones who can both <span class="text-white/80">design the hardware</span> and <span class="text-white/80">write the code</span> to analyze it -- and I'm driven to be one of them.
             </p>
           </div>
         </div>
@@ -197,7 +241,9 @@
           </div>
           <div class="stat-card">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-black shrink-0" style="background: #9E1B32; color: #fff; border: 1px solid rgba(255,255,255,0.15);">UA</div>
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 shadow-lg" style="background: linear-gradient(135deg, #9E1B32 0%, #7a1427 100%); border: 1px solid rgba(255,255,255,0.15);">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Alabama_Crimson_Tide_logo.svg/120px-Alabama_Crimson_Tide_logo.svg.png" alt="University of Alabama" class="w-8 h-8 object-contain brightness-0 invert" loading="lazy" />
+              </div>
               <div>
                 <div class="text-2xl font-black text-white leading-tight">BS</div>
                 <p class="text-white/40 text-sm">Aerospace - Alabama</p>
@@ -206,7 +252,9 @@
           </div>
           <div class="stat-card">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg flex items-center justify-center text-lg font-black shrink-0" style="background: #00274C; color: #FFCB05; border: 1px solid rgba(255,203,5,0.3);">M</div>
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 shadow-lg" style="background: linear-gradient(135deg, #00274C 0%, #001a33 100%); border: 1px solid rgba(255,203,5,0.3);">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Michigan_Wolverines_logo.svg/120px-Michigan_Wolverines_logo.svg.png" alt="University of Michigan" class="w-8 h-8 object-contain" loading="lazy" />
+              </div>
               <div>
                 <div class="text-2xl font-black text-white leading-tight">MS</div>
                 <p class="text-white/40 text-sm">Aerospace - UMich</p>
@@ -344,18 +392,26 @@
       <!-- Project cards -->
       <div class="grid lg:grid-cols-2 gap-8">
         <!-- Project 1: CFD & Structural Analysis (FEATURED) -->
-        <div class="project-card reveal-up group" style="--delay: 0s">
+        <a href="https://github.com/Keelan4604" target="_blank" class="project-card reveal-up group cursor-pointer" style="--delay: 0s">
           <div class="absolute inset-0 rounded-2xl border-beam-container overflow-hidden">
             <div class="border-beam"></div>
           </div>
           <div class="relative p-8 md:p-10">
             <div class="flex items-center justify-between mb-6">
               <span class="px-3 py-1 text-xs font-mono text-accent bg-accent/10 rounded-full border border-accent/20">Featured</span>
+              <svg class="w-5 h-5 text-white/20 group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition-colors">CFD & Structural Analysis</h3>
-            <p class="text-white/40 mb-6 leading-relaxed">
-              Computational fluid dynamics simulations and finite element analysis for aerospace applications. Wing optimization, thermal analysis, shear flow computations, and aerodynamic performance studies using ANSYS Fluent, MATLAB, and SolidWorks.
+            <p class="text-white/40 mb-4 leading-relaxed">
+              Computational fluid dynamics simulations and finite element analysis for aerospace applications. Optimized airfoil profiles using RANS-based CFD in ANSYS Fluent, achieving a 12% improvement in L/D ratio. Performed shear flow computations on multi-cell wing structures and thermal stress analysis on turbine blade geometries.
             </p>
+            <div class="flex flex-wrap gap-3 mb-4 text-sm">
+              <span class="text-accent/80 font-mono">12% L/D improvement</span>
+              <span class="text-white/20">|</span>
+              <span class="text-accent/80 font-mono">3D RANS simulations</span>
+              <span class="text-white/20">|</span>
+              <span class="text-accent/80 font-mono">Multi-cell FEA</span>
+            </div>
             <div class="flex flex-wrap gap-2">
               <span class="project-tag">ANSYS Fluent</span>
               <span class="project-tag">MATLAB</span>
@@ -364,13 +420,14 @@
               <span class="project-tag">SolidWorks</span>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Project 2: Aerospace Design -->
-        <div class="project-card reveal-up group" style="--delay: 0.15s">
+        <a href="https://github.com/Keelan4604" target="_blank" class="project-card reveal-up group cursor-pointer" style="--delay: 0.15s">
           <div class="relative p-8 md:p-10">
             <div class="flex items-center justify-between mb-6">
               <span class="px-3 py-1 text-xs font-mono text-orange-400 bg-orange-400/10 rounded-full border border-orange-400/20">Engineering</span>
+              <svg class="w-5 h-5 text-white/20 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Orbital Mechanics & Propulsion</h3>
             <p class="text-white/40 mb-6 leading-relaxed">
@@ -383,18 +440,14 @@
               <span class="project-tag">Propulsion</span>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Project 3: OpenClaw (side project) -->
-        <div class="project-card reveal-up group" style="--delay: 0.3s">
+        <a href="https://github.com/Keelan4604" target="_blank" class="project-card reveal-up group cursor-pointer" style="--delay: 0.3s">
           <div class="relative p-8 md:p-10">
             <div class="flex items-center justify-between mb-6">
               <span class="px-3 py-1 text-xs font-mono text-purple-400 bg-purple-400/10 rounded-full border border-purple-400/20">Side Project</span>
-              <div class="flex gap-3">
-                <a href="#" class="text-white/30 hover:text-white transition-colors">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
+              <svg class="w-5 h-5 text-white/20 group-hover:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">OpenClaw Automation Framework</h3>
             <p class="text-white/40 mb-6 leading-relaxed">
@@ -406,7 +459,7 @@
               <span class="project-tag">Python</span>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Project 4: Web Design Business -->
         <div class="project-card reveal-up group" style="--delay: 0.45s">
@@ -455,7 +508,9 @@
               <span class="text-accent font-mono text-sm">2026 - Present</span>
               <h3 class="text-xl font-bold text-white mt-2">MS Aerospace Engineering</h3>
               <div class="flex items-center gap-3 mt-1">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xs font-black tracking-tight" style="background: #00274C; color: #FFCB05; border: 1px solid #FFCB05;">M</div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background: linear-gradient(135deg, #00274C, #001a33); border: 1px solid rgba(255,203,5,0.3);">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Michigan_Wolverines_logo.svg/120px-Michigan_Wolverines_logo.svg.png" alt="UMich" class="w-7 h-7 object-contain" loading="lazy" />
+                </div>
                 <p class="text-white/70 font-medium">University of Michigan</p>
               </div>
               <p class="text-white/40 mt-2 text-sm">Graduate research in advanced aerospace systems.</p>
@@ -472,7 +527,9 @@
               <span class="text-accent/70 font-mono text-sm">2022 - 2026</span>
               <h3 class="text-xl font-bold text-white mt-2">BS Aerospace Engineering</h3>
               <div class="flex items-center gap-3 mt-1">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xs font-black tracking-tight" style="background: #9E1B32; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2);">UA</div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background: linear-gradient(135deg, #9E1B32, #7a1427); border: 1px solid rgba(255,255,255,0.15);">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Alabama_Crimson_Tide_logo.svg/120px-Alabama_Crimson_Tide_logo.svg.png" alt="Alabama" class="w-7 h-7 object-contain brightness-0 invert" loading="lazy" />
+                </div>
                 <p class="text-white/70 font-medium">University of Alabama</p>
               </div>
               <p class="text-white/40 mt-2 text-sm">Core coursework in aerodynamics, propulsion, orbital mechanics, and structures. Built multiple software tools and automation systems.</p>
@@ -565,12 +622,12 @@
         </p>
       </div>
 
-      <div class="reveal-up flex flex-col sm:flex-row items-center justify-center gap-6">
+      <div class="reveal-up flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
         <a href="mailto:keelan@keelanodoherty.org" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-accent rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)] hover:scale-[1.02]">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          Send me an email
+          keelan@keelanodoherty.org
         </a>
-        <a href="https://github.com/KeelanO" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 border border-white/10 rounded-xl font-semibold text-white/70 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300">
+        <a href="https://github.com/Keelan4604" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 border border-white/10 rounded-xl font-semibold text-white/70 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           GitHub
         </a>
@@ -578,6 +635,29 @@
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="reveal-up max-w-lg mx-auto">
+        <form action="https://formspree.io/f/xpwzgkvq" method="POST" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm text-white/50 mb-2 font-medium">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:bg-white/[0.07] transition-all duration-300" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm text-white/50 mb-2 font-medium">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:bg-white/[0.07] transition-all duration-300" placeholder="you@email.com" />
+            </div>
+          </div>
+          <div>
+            <label for="message" class="block text-sm text-white/50 mb-2 font-medium">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:bg-white/[0.07] transition-all duration-300 resize-none" placeholder="What's on your mind?"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 bg-accent/10 border border-accent/30 rounded-xl text-accent font-semibold hover:bg-accent/20 hover:border-accent/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+            Send Message
+          </button>
+        </form>
       </div>
     </div>
   </section>
@@ -589,7 +669,7 @@
         &copy; 2026 Keelan O'Doherty. Designed & built from scratch.
       </p>
       <div class="flex items-center gap-6">
-        <a href="https://github.com/KeelanO" target="_blank" class="text-white/30 hover:text-white/60 transition-colors text-sm">GitHub</a>
+        <a href="https://github.com/Keelan4604" target="_blank" class="text-white/30 hover:text-white/60 transition-colors text-sm">GitHub</a>
         <a href="https://linkedin.com/in/keelanodoherty" target="_blank" class="text-white/30 hover:text-white/60 transition-colors text-sm">LinkedIn</a>
         <a href="mailto:keelan@keelanodoherty.org" class="text-white/30 hover:text-white/60 transition-colors text-sm">Email</a>
       </div>

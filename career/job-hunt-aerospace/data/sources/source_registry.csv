@@ -1,0 +1,12 @@
+source_name,source_type,priority,coverage,notes,url
+BETA Careers,company_careers,1,Raleigh aerospace/eVTOL hardware,Best local aerospace anchor target with Raleigh roles,https://jobs.lever.co/beta
+Google search export,search_aggregation,1,Multi-source,Use for quick discovery before manual validation,https://www.google.com/
+LinkedIn Jobs,jobs_board,2,Broad but noisy,Good for triangulating openings but must validate source URL,https://www.linkedin.com/jobs/
+Handshake,jobs_board,2,Student/entry level,Useful for NC State compatible roles,https://joinhandshake.com/
+Latitude Inc,staffing_board,3,Raleigh/Charlotte engineering contracts,Useful backup lane for test/hardware roles,https://jobs.lever.co/latitudeinc
+Greenhouse boards,ats_board,2,Startup and growth-stage engineering,Search for Triangle hardware/autonomy openings,https://www.greenhouse.io/
+Lever boards,ats_board,2,Startup and growth-stage engineering,Search Raleigh/Triangle aerospace-adjacent openings,https://www.lever.co/
+Ashby boards,ats_board,2,Modern startup boards,Search local mobility/autonomy/hardware employers,https://www.ashbyhq.com/
+RTX / Collins Aerospace,company_careers,2,Defense/aerospace,Track NC openings that support systems/test path,https://careers.rtx.com/
+Honeywell Careers,company_careers,2,Aerospace/automation,Track Triangle engineering openings with hardware overlap,https://careers.honeywell.com/
+GE Aerospace Careers,company_careers,2,Aerospace and test,Track NC-adjacent roles only when commute works,https://jobs.gecareers.com/global/en/ge-aerospace-jobs
