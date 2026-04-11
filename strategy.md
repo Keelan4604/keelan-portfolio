@@ -15,8 +15,8 @@ Next expansion: Ann Arbor, MI / Detroit metro (Keelan moving there for UMich MS 
 
 ## What's Working
 
-- **9 demo sites live on Cloudflare Pages** — Holifield Electrical, T-Town Garage Doors, Sweet Olive Eats, Edwards Flooring, H&H Repair, Jamaican Spice + 3 new: Ohana, White Raven, Deon's Barbershop. Plus the original West Alabama Fence proof-of-concept.
-- **More sites building now** — N&K Auto, Reggae Fusion, Magnolia Concrete, Bowen Automotive in progress.
+- **18 demo sites live on Cloudflare Pages** — Holifield Electrical, T-Town Garage Doors, Sweet Olive Eats, Edwards Flooring, H&H Repair, Jamaican Spice, Ohana, White Raven, Deon's Barbershop, Bowen Automotive, N&K Auto, Reggae Fusion, Magnolia Concrete, West Alabama Fence, ARS Mobile Mechanic, AAB Janitorial, Auto One Ypsilanti, Premium Auto Repair. All deployed and live.
+- **7 new sites deployed overnight April 11** — Bowen, N&K Auto, Reggae Fusion, Magnolia Concrete, West AL Fence, Auto One, AAB Janitorial, ARS Mechanic, Premium Auto.
 - **SmartChat chatbot MVP deployed** at https://smartchat-demo.pages.dev/ — ready to demo as an upsell.
 - **104 leads tracked** in Google Sheet (original 88 + 16 new from round 3). All scored, all no-website businesses.
 - **37+ Gmail drafts created and ready to send.** Email outreach system completely rebuilt on Gmail (iCloud was broken).
@@ -68,12 +68,15 @@ Next expansion: Ann Arbor, MI / Detroit metro (Keelan moving there for UMich MS 
 | Facebook-only business discovery | VALIDATED | Works well as secondary source |
 | Idea discovery track | COMPLETED 2026-04-09 | Top pick: AI automation + web design bundle |
 | **AI Chatbot add-on service** | MVP DEPLOYED 2026-04-10 | 92% margin, $149-249/mo recurring. Demo live at smartchat-demo.pages.dev |
-| **Demo site portfolio** | 9 SITES LIVE 2026-04-10 | +Ohana, White Raven, Deon's Barbershop. 4 more building. |
+| **Demo site portfolio** | 18 SITES LIVE 2026-04-11 | 7 new deployed overnight. Full portfolio ready. |
 | **Lead gen expansion (3 rounds)** | COMPLETED 2026-04-10 | 104 leads total (88 original + 16 round 3) |
 | **Gmail outreach system** | 37+ DRAFTS READY 2026-04-10 | Rebuilt from scratch on Gmail after iCloud failed |
 | **Google Sheet overhaul** | COMPLETED 2026-04-10 | 10 main cols + 3 tracking cols (Email Sent, Follow-Up, Response) |
-| **GBP optimization service** | IDEA 2026-04-10 | $199 foot-in-the-door. Works for ALL leads. |
+| **GBP optimization service** | DELIVERABLES READY 2026-04-11 | $199 foot-in-the-door. Full checklist + deliverables doc created. |
 | **Multi-channel outreach** | DOCS CREATED 2026-04-10 | Phone outreach doc + FB message doc ready |
+| **Pricing tiers document** | COMPLETED 2026-04-11 | 4 tiers: GBP $199, Website $500-2K, +Chatbot $997-1.5K+$149/mo, Full Package $2-3K+$249/mo |
+| **Idea discovery round 2** | COMPLETED 2026-04-11 | Top pick: Micro-SaaS contractor job tracker (score 76). Ann Arbor pre-seed (73). |
+| **Ann Arbor lead gen** | IN PROGRESS 2026-04-11 | Pre-seeding pipeline for Fall 2026 move. Google Maps no-website sweep. |
 
 ---
 
@@ -259,30 +262,33 @@ _First run of the overnight idea discovery agent. Full report: `idea-tracker/ove
 | 2026-04-09 | — | — | — | First night with new system |
 | 2026-04-10 (AM) | 45+ | 5 | 6 (+chatbot MVP) | 22 agents across 4 rounds. Demo portfolio ready. |
 | 2026-04-10 (PM) | 104 total | 37+ Gmail drafts | 9 (+4 building) | iCloud dead, Gmail works. GBP optimization idea. |
+| 2026-04-11 | Ann Arbor sweep in progress | — | 18 total (7 new deployed) | All 4 pending sites deployed. Pricing + GBP docs done. Micro-SaaS idea (76). |
 
 ---
 
 ## Revenue Track #3: Google Business Profile Optimization
 
-**Status:** Idea stage, not yet launched.
+**Status:** Deliverables ready. Full checklist at `gbp-optimization-checklist.md`.
 
 **Model:** $199 one-time fee per business. Optimize their Google Business Profile (photos, description, categories, hours, posts, Q&A). Easy to deliver, high perceived value.
 
 **Edge:** Works for ALL 104 leads, not just the ones with email. Can pitch via phone or Facebook message. Low barrier — business owners understand Google immediately. Natural upsell to website ($500-2000) and chatbot ($149-249/mo).
 
 **Next steps:**
-1. Create a GBP optimization checklist/deliverables doc
+1. ~~Create a GBP optimization checklist/deliverables doc~~ — DONE (2026-04-11)
 2. Price test: offer to 5 leads as a standalone service
 3. If it converts, build it into the standard pitch as the entry-level tier
 
 ---
 
-## Tonight's Priority (April 10-11)
+## Tonight's Priority (April 11-12)
 
-Email outreach system is rebuilt and loaded. Focus tonight:
+Pipeline is maxed out. Every sales enablement asset is built. The ONLY thing that matters now is human action.
 
-1. **Keelan reviews and sends Gmail drafts** — 37+ drafts sitting in Gmail. This is revenue-critical.
-2. Build remaining demo sites (N&K Auto, Reggae Fusion, Magnolia Concrete, Bowen Automotive) if not already done
-3. Create GBP optimization service deliverables doc
-4. Create pricing tiers document (GBP-only $199 / website-only $500-2000 / website+chatbot $997-1497 setup + $149/mo)
-5. Monitor Gmail for any early responses to outreach
+1. **KEELAN SENDS THE GMAIL DRAFTS** — 37+ drafts sitting in Gmail. This is revenue-critical. Zero outreach has gone out. Every day of delay is a missed opportunity.
+2. **Review demo portfolio** — 18 live sites. Pick favorites, note any tweaks, then use them in outreach.
+3. **Start Ann Arbor lead gen outreach** — pre-seed pipeline for Fall 2026 move (agent results pending).
+4. **Explore micro-SaaS contractor job tracker** — top idea from idea discovery (score 76). During every outreach call, ask: "How do you track jobs and invoices?" Free customer discovery.
+5. **Professor emails** — 5 drafts ready. Send before Europe trip (May 18).
+6. **Wyzant/Upwork signup** — profiles drafted, just needs account creation.
+7. Night brain: continue Ann Arbor lead gen, build Ann Arbor demo sites, contractor SaaS customer discovery research.
