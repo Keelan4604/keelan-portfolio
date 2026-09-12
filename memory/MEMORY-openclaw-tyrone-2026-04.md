@@ -1,0 +1,36 @@
+# MEMORY
+
+- 2026-03-04: Assistant identity set to **Tyrone**. Human is **Keelan**.
+- 2026-03-04: Keelan preference: remember important things in memory files going forward.
+- 2026-03-04: OpenClaw workspace/root currently allows access under `C:\Users\Keela`.
+- 2026-03-04: Home Assistant base URL is `https://keelanodoherty.org`.
+- 2026-03-04: Added `ha-control.ps1` in workspace to control HA lights using token from `C:\Users\Keela\.openclaw\secrets\ha_token.txt`.
+- 2026-03-04: Security note: tokens were shared in chat; should be rotated after setup.
+- 2026-03-23: Keelan prefers concise replies with real personality: short, direct, lightly sassy/funny, more opinionated, and not overly sterile.
+- 2026-03-23: Keelan studies Aerospace Engineering at the University of Alabama with a Mathematics minor; expected graduation May 2026.
+- 2026-03-23: Keelan's technical/work profile includes self-hosted infrastructure, Home Assistant/home automation, Docker/Hyper-V/server tooling, embedded/electrical systems, MATLAB/Simulink, SolidWorks, Python, and hands-on vehicle/watercraft restoration.
+- 2026-03-23: Keelan's background includes research/project work in UAV propeller acoustics/thrust optimization and fixed-wing eVTOL systems, plus a strong interest in real-world aerospace systems and first-responder applications.
+- 2026-03-26: ~~Keelan is going to NC State for an MS in Aerospace Engineering~~ **SUPERSEDED** — see 2026-04-10 entry: Keelan is going to UMich. Original entry preserved for context: wanted a job-search agent that scrapes the web for jobs/internships within driving distance, expands the existing job hunt Google Sheet, stores progress in the workspace, and supports custom cover letters per role.
+- 2026-03-26: Current resume and cover-letter seeds were found in Downloads and copied into `career/job-hunt-aerospace/materials/`; best primary seed for future letters is the Lockheed Martin Space systems integration/test intern cover letter.
+- 2026-04-08: For local-business website sales, preferred workflow is Claude for design/code generation and Tyrone for ops, prompting, pricing, deployment guidance, and tracker/process management.
+- 2026-04-08: Preferred website sales business model is one-time build fee plus optional maintenance, ideally on client-owned hosting/accounts.
+- 2026-04-08: For sites already on WordPress/Beaver Builder, safest first move is usually a custom page/template rather than replacing the whole theme.
+- 2026-04-08: For iterative static prospect demos, GitHub + Cloudflare Pages is preferred over manual upload because it adds version history, rollback, and auto-deploy.
+- 2026-04-08: Website sales tracker Google Sheet created at `https://docs.google.com/spreadsheets/d/11JDPPhlagWjTqnRnJIKo3j2-qJOvDO-FvpGYEddPzo0/edit`.
+- 2026-04-08: First tracked prospect is West Alabama Fence with demo URL `https://westalabamafence.keelanodoherty.org/`; strong target profile is a high-ticket local service with a weak site and low-maintenance brochure-site needs.
+- 2026-04-10: **CORRECTION**: Keelan is going to the **University of Michigan (UMich)** for MS Aerospace Engineering, NOT NC State. All prior NC State references are outdated.
+- 2026-04-10: Keelan has a girlfriend who is doing an MS in Biostatistics at UMich — they will both be in Ann Arbor starting Fall 2026.
+- 2026-04-10: Keelan has an 8'2" truck (relevant for Ann Arbor parking, moving, and winter driving considerations).
+- 2026-04-10: Keelan is going to Europe on May 18, 2026 — boys trip (Dublin + Prague) then girlfriend trip (Naples/Amalfi Coast), returning ~June 1.
+- 2026-04-10: UMich Aerospace does NOT guarantee funding for MS students. Out-of-state tuition ~$61K/yr. Side income is critical. Target: SMART Scholarship (opens Aug 1, due Dec 2026), GSRA/GSI positions, and MATLAB tutoring.
+- 2026-04-10: Website sales pipeline now has 104 scored no-website leads in Google Sheet. Top lead: Holifield Electrical LLC (score 90).
+- 2026-04-10: MATLAB tutoring identified as low-effort income stream ($900-$3,400/mo). Best platform: Wyzant at $60-80/hr. UMich has 12,000+ engineering students.
+- 2026-04-10: AI chatbot upsell is the highest-revenue add-on to website sales ($250-$500/mo recurring per client).
+- 2026-04-10: Overnight agent system fully operational — 6 agents ran successfully on April 9-10 night cycle.
+- 2026-04-11: **18 demo sites live** on Cloudflare Pages. 7 new deployed overnight. Full portfolio at `workspace/WEBSITES/`.
+- 2026-04-11: **Pricing tiers doc** at `pricing-tiers.md` — 4 tiers: GBP $199, Website $500-2K, +Chatbot $997-1.5K+$149/mo, Full Package $2-3K+$249/mo.
+- 2026-04-11: **GBP optimization deliverables** ready at `gbp-optimization-checklist.md` — 9-phase service delivery guide.
+- 2026-04-11: **Idea discovery round 2** — Top pick: Micro-SaaS contractor job tracker (score 76/100). Customer discovery via website sales calls (ask "How do you track jobs?").
+- 2026-04-11: **Cloudflare auth** — OAuth credentials stored at `C:\Users\Keela\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\xdg.config\.wrangler\config\default.toml`. Set `XDG_CONFIG_HOME` to that parent dir for wrangler to work.
+- 2026-04-11: **WhatsApp gateway not active** — `openclaw agent --channel whatsapp` requires active WhatsApp Web listener. Fall back to Gmail draft if gateway is down.
+- 2026-04-11: **37+ Gmail outreach drafts STILL UNSENT** — this is the #1 revenue bottleneck. Only Keelan can send them.
